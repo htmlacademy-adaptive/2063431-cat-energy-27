@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body class="page__body">
@@ -19,13 +20,13 @@
       </button>
       <ul class="main-nav__list">
         <li class="main-nav__item main-nav__item--active">
-          <a>Главная</a>
+          <a class="main-nav__link">Главная</a>
         </li>
         <li class="main-nav__item">
-          <a href="catalog.html">Каталог продукции</a>
+          <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
         </li>
         <li class="main-nav__item">
-          <a href="form.html">Подбор программы</a>
+          <a class="main-nav__link" href="form.html">Подбор программы</a>
         </li>
       </ul>
     </nav>
@@ -38,27 +39,29 @@
         <p class="promo__subtitle">Занялся собой? Займись котом!</p>
         <img class="promo__image" src="img/promo-can.png" width="280" height="270"
           alt="Банка «Кэт энерджи», со вкусом курицы.">
-        <a href="form.html">Подобрать программу</a>
+        <a class="promo__button button" href="form.html">Подобрать программу</a>
       </div>
     </section>
 
     <section class="program">
-      <h2 class="visually-hidden">Выбор программы для вашего кота</h2>
-      <ul class="program__list">
-        <li class="program__item program__item--weight-loss">
-          <h3 class="program__title">Похудение</h3>
-          <p class="program__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям?
-            Пора
-            на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-          <a href="#">Каталог SLIM</a>
-        </li>
-        <li class="program__item program__item--weight-gain">
-          <h3 class="program__title">Набор массы</h3>
-          <p class="program__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro
-            поможет вашему коту нарастить необходимые мышцы!</p>
-          <a href="#">Каталог PRO</a>
-        </li>
-      </ul>
+      <div class="program__wrapper">
+        <h2 class="visually-hidden">Выбор программы для вашего кота</h2>
+        <ul class="program__list">
+          <li class="program__item program__item--weight-loss">
+            <h3 class="program__title">Похудение</h3>
+            <p class="program__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям?
+              Пора
+              на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
+            <a class="program__link" href="#">Каталог SLIM</a>
+          </li>
+          <li class="program__item program__item--weight-gain">
+            <h3 class="program__title">Набор массы</h3>
+            <p class="program__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro
+              поможет вашему коту нарастить необходимые мышцы!</p>
+            <a class="program__link" href="#">Каталог PRO</a>
+          </li>
+        </ul>
+      </div>
     </section>
 
     <section class="instruction">
@@ -82,31 +85,32 @@
     </section>
 
     <section class="example">
-      <h2 class="example__title">Живой пример</h2>
-      <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
-        Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по
-        16 часов в день. </p>
-      <dl class="example__list">
-        <div class="example__item">
-          <dt class="example__term">Снижение веса</dt>
-          <dd class="example__value">5 кг</dd>
-        </div>
-        <div class="example__item">
-          <dt class="example__term">Затрачено времени</dt>
-          <dd class="example__value">60 дней</dd>
-        </div>
+      <div class="example__wrapper">
+        <h2 class="example__title">Живой пример</h2>
+        <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
+          Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по
+          16 часов в день. </p>
+        <dl class="example__list">
+          <div class="example__item">
+            <dt class="example__term">Снижение веса</dt>
+            <dd class="example__value">5 кг</dd>
+          </div>
+          <div class="example__item">
+            <dt class="example__term">Затрачено времени</dt>
+            <dd class="example__value">60 дней</dd>
+          </div>
 
-        <div class="example__cost">
-          <dt class="example__term">Затраты на питание:</dt>
-          <dd class="example__value">15 000 руб.</dd>
-        </div>
-      </dl>
+          <div class="example__cost">
+            <dt class="example__term example__term--expenses">Затраты на питание:</dt>
+            <dd class="example__value example__value--expenses">15 000 руб.</dd>
+          </div>
+        </dl>
 
-      <div class="example__slider">
-        <img class="example__image-before" src="img/example-cat-before.png" alt="Фото кота до «Кэт энерджи».">
-        <img class="example__image-after" src="img/example-cat-after.png" alt="Фото кота после «Кэт энерджи».">
+        <div class="example__slider">
+          <img class="example__image-before" src="img/example-cat-before.png" alt="Фото кота до «Кэт энерджи».">
+          <img class="example__image-after" src="img/example-cat-after.png" alt="Фото кота после «Кэт энерджи».">
+        </div>
       </div>
-
     </section>
 
     <footer class="main-footer">
@@ -120,10 +124,11 @@
             alt="Местоположение «Кэт энерджи».">
         </div>
 
-        <a class="logo" href="#">
+        <a class="main-footer__logo" href="#">
           <img class="logo" src="img/logo/cat-energy-logo.svg" width="102" height="18" alt="«Кэт энерджи».">
         </a>
 
+        <div class="main-footer__social-wrapper">
           <ul class="main-footer__social social">
             <li class="social__item">
               <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Вконтакте</a>
@@ -135,6 +140,7 @@
               <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">Телеграм</a>
             </li>
           </ul>
+        </div>
 
         <small class="main-footer__copyright copyright">
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
