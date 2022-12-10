@@ -1,12 +1,21 @@
+.main-footer {
+  background-color: #f2f2f2;
+  padding: 0 0 20px;
+}
+
 .main-footer__adress {
   display: flex;
-  margin: 20px;
+  padding: 26px 20px 26px;
+
+  &--index {
+    background-color: #ffffff;
+  }
 }
 
 .contacts__title {
-  font-family: "Oswald", sans-serif;
+  font-family: @accent-font;
   font-size: 16px;
-  line-height: 20px;
+  line-height: (20 / 16);
   font-weight: 400;
   color: #111111;
   text-transform: uppercase;
@@ -15,22 +24,22 @@
 }
 
 .contacts__text {
-  font-family: "Lato", sans-serif;
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 400;
+  line-height: (20 / 14);
   color: #444444;
   font-style: normal;
   margin: 0;
 }
 
 .contacts__location {
+  border: none;
+  width: 100%;
   margin-bottom: 39px;
+  padding: 0;
 }
 
 .main-footer__logo {
   display: block;
-  margin: 0 96px 52px 96px;
+  padding: 0 96px 52px 96px;
 }
 
 .main-footer__social-wrapper {

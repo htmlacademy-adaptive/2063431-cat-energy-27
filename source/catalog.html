@@ -15,7 +15,7 @@
     </a>
 
     <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">
+      <button class="main-nav__toggle" type="button" hidden>
         <span class="visually-hidden">Открыть меню</span>
       </button>
       <ul class="main-nav__list">
@@ -200,7 +200,7 @@
       <article class="catalog__show-more">
         <h2 class="catalog__show-more-title">Показать еще 100500 товаров</h2>
         <p class="catalog__text">На самом деле вкусов гораздо больше!</p>
-        <button class="catalog__show-all button" type="button">Показать все</button>
+        <button class="catalog__show-all button button--secondary" type="button">Показать все</button>
       </article>
     </section>
 
@@ -265,8 +265,12 @@
           <b class="contacts__title">Приглашаем к сотрудничеству</b>
           <p class="contacts__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
         </address>
-        <img class="contacts__location" src="img/location.png" width="320" height="360"
-          alt="Местоположение «Кэт энерджи».">
+        <iframe class="contacts__location"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037861610246!2d30.3230474!3d59.9387165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1670665503603!5m2!1sru!2sru"
+          width="320" height="362" style="border: 0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <!-- <img class="contacts__location" src="img/location.png" width="320" height="360"
+            alt="Местоположение «Кэт энерджи»."> -->
       </div>
 
       <a class="main-footer__logo" href="#">

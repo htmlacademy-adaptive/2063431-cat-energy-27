@@ -1,24 +1,20 @@
 .form {
-  margin: 20px;
+  padding: 20px 20px 0;
+  font-family: @accent-font;
 }
 
 .form__title {
-  font-family: "Oswald", sans-serif;
   font-size: 36px;
-  line-height: 36px;
+  line-height: 1;
   font-weight: 400;
-  margin-bottom: 37px;
+  margin: 0 0 37px;
 }
 
 .form__text {
-  font-family: "Oswald", sans-serif;
-  font-size: 14px;
-  line-height: 18px;
-  font-weight: 400;
-  margin-bottom: 39px;
+  margin: 0 0 39px;
 }
 
-.form__data {
+.form__fieldset {
   padding: 0;
   margin: 0;
   border: none;
@@ -31,36 +27,29 @@
 }
 
 .form__label {
-  font-family: "Oswald", sans-serif;
   font-size: 16px;
-  line-height: 18px;
-  font-weight: 400;
+  line-height: (18 / 16);
   color: #444444;
   text-transform: uppercase;
   margin-right: 13px;
 }
 
 .form__field {
-  font-family: "Oswald", sans-serif;
+  font-family: inherit;
   font-size: 16px;
-  line-height: 18px;
-  font-weight: 400;
+  line-height: (18 / 16);
   color: #444444;
   text-transform: uppercase;
+  margin: 0;
+  padding: 14px 20px;
 }
 
 .form__field-group {
-  margin-bottom: 14px;
+  margin: 0 0 14px;
 }
 
 .form__field-group:last-child {
   margin-bottom: 46px;
-}
-
-.form__selection {
-  padding: 0;
-  margin: 0;
-  border: none;
 }
 
 .form__list {
@@ -77,40 +66,25 @@
   margin-bottom: 45px;
 }
 
-.form__contacts {
-  padding: 0;
-  margin: 0;
-  border: none;
-}
-
 .form__subtitle {
-  font-family: "Oswald", sans-serif;
   font-size: 24px;
-  line-height: 26px;
+  line-height: (26 / 24);
   font-weight: 400;
   margin: 0 0 37px;
 }
 
 .form__textarea {
-  font-family: "Oswald", sans-serif;
+  font-family: @accent-font;
   font-size: 16px;
-  line-height: 18px;
-  font-weight: 400;
-}
-
-.form__comment {
-  margin-bottom: 22px;
-}
-
-.form__additional {
-  padding: 0;
-  margin: 0;
-  border: none;
+  line-height: (18 / 16);
 }
 
 .form__text-required {
   display: block;
-  margin-top: 21px;
-  margin-bottom: 32px;
+  padding: 21px 0 32px;
   text-align: center;
+}
+
+.form__comment {
+  margin-bottom: 22px;
 }

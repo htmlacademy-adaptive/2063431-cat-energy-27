@@ -1,13 +1,13 @@
 .catalog {
-  margin: 20px;
+  padding: 27px 20px 20px;
 }
 
 .catalog__title {
-  font-family: "Oswald", sans-serif;
+  font-family: @accent-font;
   font-size: 36px;
-  line-height: 36px;
+  line-height: 1;
   font-weight: 400;
-  margin-bottom: 49px;
+  margin: 0 0 49px;
 }
 
 .catalog__item {
@@ -20,9 +20,9 @@
 }
 
 .catalog__show-more-title {
-  font-family: "Oswald", sans-serif;
+  font-family: @accent-font;
   font-size: 16px;
-  line-height: 20px;
+  line-height: (20 / 16);
   font-weight: 400;
   color: #111111;
   text-transform: uppercase;
@@ -30,33 +30,25 @@
 }
 
 .catalog__text {
-  font-family: "Lato", sans-serif;
   font-size: 12px;
-  line-height: 16px;
-  font-weight: 400;
+  line-height: (16 / 12);
   color: #444444;
   margin-bottom: 21px;
 }
 
-.catalog__show-all {
-  background-color: #f2f2f2;
-  color: #444444;
-}
-
 .catalog-bonus-text {
-  font-family: "Lato", sans-serif;
   font-size: 16px;
-  line-height: 20px;
-  font-weight: 400;
+  line-height: (20 / 16);
   color: #ffffff;
   text-align: center;
+  margin: 0;
   padding: 186px 61px 43px 58px;
 }
 
 .catalog-bonus-background {
   height: 290px;
-  margin: 20px;
+  margin: 0 20px;
   background-image: url("../../img/catalog/bg-catalog.png");
   background-repeat: no-repeat;
-  margin-bottom: 35px;
+  padding-bottom: 35px;
 }

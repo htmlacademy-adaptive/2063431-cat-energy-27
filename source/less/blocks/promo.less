@@ -1,27 +1,38 @@
 .promo {
-  background: rgba(104, 183, 56, 0.85) url("../../img/index-background.png") no-repeat top;
-}
+  font-family: @accent-font;
+  text-align: center;
+  color: #ffffff;
+  padding: 27px 20px 0;
+  --cat-size: 302px;
+  background-color: @accent-color;
+  background-image: linear-gradient(@accent-color var(--cat-size), #ffffff var(--cat-size));
+  position: relative;
+  z-index: 0;
 
-.promo__wrapper {
-  margin: 0 20px 20px 20px;
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: var(--cat-size);
+    background-image: url("../img/index-background.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.15;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
 }
 
 .promo__title {
-  font-family: "Oswald", sans-serif;
   font-size: 36px;
-  line-height: 36px;
   font-weight: 400;
-  color: #ffffff;
-  text-align: center;
-  padding-top: 27px;
+  line-height: 1;
+  margin: 0 0 25px;
 }
 
 .promo__subtitle {
-  font-family: "Oswald", sans-serif;
-  font-size: 14px;
-  line-height: 14px;
-  font-weight: 400;
+  line-height: 1;
   text-transform: uppercase;
-  color: #ffffff;
-  text-align: center;
 }
