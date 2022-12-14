@@ -19,7 +19,7 @@
 }
 
 .instruction__text {
-  color: #444444;
+  color: @darkgrey;
 }
 
 .instruction__item {
@@ -28,4 +28,18 @@
 
 .instruction__item:last-child {
   margin-bottom: 40px;
+}
+
+@media (min-width: @tablet-width) {
+  .instruction__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    list-style-type: decimal;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .instruction__list {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }

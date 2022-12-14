@@ -1,6 +1,6 @@
 .program {
   margin: 20px;
-  background-color: #f2f2f2;
+  background-color: @basicgrey;
 }
 
 .program__title {
@@ -14,8 +14,9 @@
 }
 
 .program__description {
-  color: #444444;
-  margin: 0;
+  min-width: 227px;
+  color: @darkgrey;
+  margin: 0 auto;
   padding: 0 33px 38px 22px;
 }
 
@@ -27,4 +28,32 @@
   text-decoration: none;
   color: #000000;
   padding: 0 0 18px 19px;
+}
+
+@media (min-width: @tablet-width) {
+  .program__description {
+    min-width: 340px;
+    margin: 0;
+    padding-left: 52px;
+  }
+
+  .program__title {
+    padding-left: 53px;
+  }
+
+  .program__link {
+    padding-bottom: 53px;
+    padding-left: 52px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .programs {
+    display: flex;
+    max-width: 1200px;
+  }
+
+  .program {
+    min-width: 570px;
+  }
 }

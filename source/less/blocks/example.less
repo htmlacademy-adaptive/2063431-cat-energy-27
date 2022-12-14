@@ -1,5 +1,5 @@
 .example {
-  background-color: #eaeaea;
+  background-color: @lightgrey;
   padding: 25px 20px 0;
 }
 
@@ -42,4 +42,20 @@
 
 .example__slider {
   padding-bottom: 40px;
+}
+
+@media (min-width: @tablet-width) {
+  .example {
+    height: 1080px;
+    --bg-size: 620px;
+    background-image: linear-gradient(@white var(--bg-size), @lightgrey var(--bg-size));
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example {
+    height: 600px;
+    --bg-size: 136px;
+    background-image: linear-gradient(@white var(--bg-size), @lightgrey var(--bg-size));
+  }
 }

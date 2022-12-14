@@ -1,7 +1,7 @@
 .promo {
   font-family: @accent-font;
   text-align: center;
-  color: #ffffff;
+  color: @white;
   padding: 27px 20px 0;
   --cat-size: 302px;
   background-color: @accent-color;
@@ -35,4 +35,28 @@
 .promo__subtitle {
   line-height: 1;
   text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .promo {
+    background-color: @white;
+    background-image: none;
+    color: @black;
+
+    &::after {
+      background-image: none;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .promo {
+    --cat-size: 694px;
+    background-color: @accent-color;
+    background-image: linear-gradient(@accent-color var(--cat-size), #ffffff var(--cat-size));
+
+    &::after {
+      background-image: url("../img/index-background.png");
+    }
+  }
 }

@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
   <link href="css/style.css" rel="stylesheet">
 </head>
@@ -15,7 +16,7 @@
     </a>
 
     <nav class="main-nav">
-      <button class="main-nav__toggle" type="button" hidden>
+      <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
       <ul class="main-nav__list">
@@ -92,7 +93,6 @@
           <dt class="example__term">Затрачено времени</dt>
           <dd class="example__value">60 дней</dd>
         </div>
-
         <div class="example__cost">
           <dt class="example__term example__term--expenses">Затраты на питание:</dt>
           <dd class="example__value example__value--expenses">15 000 руб.</dd>
@@ -108,7 +108,7 @@
     <footer class="main-footer">
       <div class="main-footer__contacts contacts">
         <address class="main-footer__adress main-footer__adress--index">
-          <b class="contacts__title">Приглашаем к сотрудничеству</b>
+          <b class="contacts__title">Приглашаем к сотрудничеству дилеров!</b>
           <p class="contacts__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
         </address>
         <iframe class="contacts__location"
@@ -119,11 +119,11 @@
             alt="Местоположение «Кэт энерджи»."> -->
       </div>
 
-      <a class="main-footer__logo" href="#">
-        <img class="logo" src="img/logo/cat-energy-logo.svg" width="102" height="18" alt="«Кэт энерджи».">
-      </a>
-
       <div class="main-footer__social-wrapper">
+        <a class="main-footer__logo" href="#">
+          <img class="logo" src="img/logo/cat-energy-logo.svg" width="102" height="18" alt="«Кэт энерджи».">
+        </a>
+
         <ul class="main-footer__social social">
           <li class="social__item">
             <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Вконтакте</a>
@@ -135,13 +135,14 @@
             <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">Телеграм</a>
           </li>
         </ul>
-      </div>
 
-      <small class="main-footer__copyright copyright">
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
-          <img class="copyright__logo" src="img/logo/academy-logo.svg" width="27" height="34" alt="«HTML Academy».">
-        </a>
-      </small>
+
+        <small class="main-footer__copyright copyright">
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
+            <img class="copyright__logo" src="img/logo/academy-logo.svg" width="27" height="34" alt="«HTML Academy».">
+          </a>
+        </small>
+      </div>
     </footer>
   </main>
 </body>

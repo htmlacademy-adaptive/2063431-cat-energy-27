@@ -88,3 +88,17 @@
 .form__comment {
   margin-bottom: 22px;
 }
+
+@media (min-width: @tablet-width) {
+  .form__list--additional {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form__list--additional {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}

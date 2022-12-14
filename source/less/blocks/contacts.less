@@ -1,0 +1,31 @@
+.contacts__title {
+  font-family: @accent-font;
+  font-size: 16px;
+  line-height: (20 / 16);
+  font-weight: 400;
+  color: #111111;
+  text-transform: uppercase;
+  font-style: normal;
+  margin-right: 2px;
+}
+
+.contacts__text {
+  line-height: (20 / 14);
+  color: @darkgrey;
+  font-style: normal;
+  margin: 0;
+}
+
+.contacts__location {
+  border: none;
+  width: 100%;
+  margin-bottom: 39px;
+  padding: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .contacts__location {
+    min-width: 768px;
+    height: 400px;
+  }
+}
