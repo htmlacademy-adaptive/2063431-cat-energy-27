@@ -1,5 +1,9 @@
 .program {
-  margin: 20px;
+  padding: 82px var(--side-offset) 71px;
+}
+
+.program__item {
+  margin-bottom: 20px;
   background-color: @basicgrey;
 }
 
@@ -31,6 +35,10 @@
 }
 
 @media (min-width: @tablet-width) {
+  .program__item {
+    margin-bottom: 30px;
+  }
+
   .program__description {
     min-width: 340px;
     margin: 0;
@@ -48,12 +56,13 @@
 }
 
 @media (min-width: @desktop-width) {
-  .programs {
+  .program {
     display: flex;
     max-width: 1200px;
   }
 
-  .program {
+  .program__item {
     min-width: 570px;
+    margin: 0 80px 0 0;
   }
 }

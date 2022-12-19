@@ -1,20 +1,26 @@
 .main-footer {
   background-color: @basicgrey;
-  padding: 0 0 20px;
 }
 
 .main-footer__adress {
   display: flex;
-  padding: 26px 20px 26px;
+  justify-content: space-between;
+  padding: 26px var(--side-offset);
 
   &--index {
     background-color: @white;
   }
 }
 
+.main-footer__social-wrapper {
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
+
 .main-footer__logo {
   display: block;
-  padding: 0 96px 52px;
+  text-align: center;
+  padding-bottom: 39px;
 }
 
 
@@ -24,6 +30,15 @@
     justify-content: space-between;
     align-items: center;
     height: 147px;
+    padding: 58px var(--side-offset) 55px;
+  }
+
+  .main-footer__adress {
+    padding: 56px calc(var(--side-offset) + 40px);
+  }
+
+  .main-footer__logo {
+    padding: 0;
   }
 }
 
@@ -34,11 +49,13 @@
 
   .main-footer__adress {
     position: absolute;
-    box-sizing: border-box;
     background-color: @white;
     top: 100px;
     left: 110px;
-    height: 198px;
     padding: 56px 80px;
+  }
+
+  .main-footer__social-wrapper {
+    padding: 57px var(--side-offset) 58px;
   }
 }

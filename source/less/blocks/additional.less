@@ -1,5 +1,5 @@
 .additional {
-  padding: 20px 20px 35px;
+  padding: 0 var(--side-offset) 76px;
 }
 
 .additional__title {
@@ -32,5 +32,11 @@
 @media (min-width: @desktop-width) {
   .additional__wrapper {
     display: flex;
+    justify-content: space-between;
+  }
+
+  .additional__bonus {
+    width: 245px;
+    height: 288px;
   }
 }

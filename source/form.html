@@ -16,7 +16,7 @@
     </a>
 
     <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">
+      <button class="main-nav__toggle" type="button" hidden>
         <span class="visually-hidden">Открыть меню</span>
       </button>
       <ul class="main-nav__list">
@@ -39,53 +39,54 @@
         <h1 class="form__title">Подбор программы</h1>
         <p class="form__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
 
-        <fieldset class="form__fieldset">
-          <legend class="visually-hidden">Данные кота</legend>
-
-          <p class="form__field-group form__field-group--name">
-            <label class="form__label" for="form-name">Имя:
-              <a class="form__required-note" href="#required-note" aria-labelledby="required-note" tabindex="-1">*</a>
-            </label>
-            <input class="form__field" type="text" id="form-name" name="form-name" placeholder="Барсик" required>
-          </p>
-          <p class="form__field-group form__field-group--weight">
-            <label class="form__label" for="form-weight">Вес (кг):
-              <a class="form__required-note" href="#required-note" aria-labelledby="required-note" tabindex="-1">*</a>
-            </label>
-            <input class="form__field" type="number" id="form-weight" name="form-weight" placeholder="7" required>
-          </p>
-          <p class="form__field-group form__field-group--age">
-            <label class="form__label" for="form-age">Возраст (лет):</label>
-            <input class="form__field" type="number" id="form-age" name="form-age" placeholder="7">
-          </p>
-        </fieldset>
-
-
-        <fieldset class="form__fieldset">
-          <legend class="visually-hidden">Выбор программы питания</legend>
-          <ul class="form__list">
-            <li class="form__item">
-              <label class="form__label">
-                <input class="form__control-input" type="radio" name="selection-group" value="weight-loss" checked>
-                <span class="form__radio-text">Похудение</span>
+        <div class="form__wrapper">
+          <fieldset class="form__fieldset form__fieldset--cat">
+            <legend class="visually-hidden">Данные кота</legend>
+            <p class="form__field-group form__field-group--name">
+              <label class="form__label" for="form-name">Имя:
+                <a class="form__required-note" href="#required-note" aria-labelledby="required-note" tabindex="-1">*</a>
               </label>
-            </li>
-            <li class="form__item">
-              <label class="form__label">
-                <input class="form__control-input" type="radio" name="selection-group" value="weight-gain">
-                <span class="form__radio-text">Набор массы</span>
+              <input class="form__field" type="text" id="form-name" name="form-name" placeholder="Барсик" required>
+            </p>
+            <p class="form__field-group form__field-group--weight">
+              <label class="form__label" for="form-weight">Вес (кг):
+                <a class="form__required-note" href="#required-note" aria-labelledby="required-note" tabindex="-1">*</a>
               </label>
-            </li>
-            <li class="form__item">
-              <label class="form__label">
-                <input class="form__control-input" type="radio" name="selection-group" value="need-advice">
-                <span class="form__radio-text">Не знаю (нужен ваш совет)</span>
-              </label>
-            </li>
-          </ul>
-        </fieldset>
+              <input class="form__field" type="number" id="form-weight" name="form-weight" placeholder="7" required>
+            </p>
+            <p class="form__field-group form__field-group--age">
+              <label class="form__label" for="form-age">Возраст (лет):</label>
+              <input class="form__field" type="number" id="form-age" name="form-age" placeholder="7">
+            </p>
+          </fieldset>
 
-        <fieldset class="form__fieldset">
+
+          <fieldset class="form__fieldset form__fieldset--program">
+            <legend class="visually-hidden">Выбор программы питания</legend>
+            <ul class="form__list">
+              <li class="form__item">
+                <label class="form__label">
+                  <input class="form__control-input" type="radio" name="selection-group" value="weight-loss" checked>
+                  <span class="form__radio-text">Похудение</span>
+                </label>
+              </li>
+              <li class="form__item">
+                <label class="form__label">
+                  <input class="form__control-input" type="radio" name="selection-group" value="weight-gain">
+                  <span class="form__radio-text">Набор массы</span>
+                </label>
+              </li>
+              <li class="form__item">
+                <label class="form__label">
+                  <input class="form__control-input" type="radio" name="selection-group" value="need-advice">
+                  <span class="form__radio-text">Не знаю (нужен ваш совет)</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+
+        <fieldset class="form__fieldset form__fieldset--owner">
           <legend class="form__subtitle">Контактные данные (владельца кота)</legend>
           <p class="form__field-group form__field-group--email">
             <label class="form__label" for="form-email">E-mail:
@@ -139,8 +140,10 @@
           </ul>
         </fieldset>
 
-        <button class="form__submit button" type="submit">Отправить заявку</button>
-        <small class="form__text-required" id="required-note">* - Обязательные поля</small>
+        <div class="form__wrapper-submit">
+          <button class="form__submit button" type="submit">Отправить заявку</button>
+          <small class="form__text-required" id="required-note">* - Обязательные поля</small>
+        </div>
 
       </form>
     </section>

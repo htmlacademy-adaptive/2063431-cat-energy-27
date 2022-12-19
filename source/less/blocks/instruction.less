@@ -1,5 +1,5 @@
 .instruction__wrapper {
-  padding: 0 20px 0 20px;
+  padding: 0 var(--side-offset) 49px;
 }
 
 .instruction__title {
@@ -7,39 +7,46 @@
   font-size: 36px;
   line-height: (40 / 36);
   font-weight: 400;
-  margin-top: 20px;
-  margin-bottom: 40px;
+  margin: 0;
+  padding-bottom: 40px;
 }
 
 .instruction__list {
   padding: 0;
-  margin: 0;
   list-style-type: none;
-  padding-left: 80px;
 }
 
 .instruction__text {
+  margin: 0;
   color: @darkgrey;
 }
 
 .instruction__item {
-  margin-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .instruction__item:last-child {
-  margin-bottom: 40px;
+  padding-bottom: 0;
 }
 
 @media (min-width: @tablet-width) {
   .instruction__list {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     list-style-type: decimal;
+  }
+
+  .instruction__item {
+    width: 230px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .instruction__wrapper {
+    padding-bottom: 69px;
+  }
+
   .instruction__list {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
   }
 }

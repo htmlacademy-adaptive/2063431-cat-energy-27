@@ -8,15 +8,22 @@
 
 .extra-goods__pack {
   line-height: 1;
-  color: #444444;
+  color: @darkgrey;
 }
 
 .extra-goods__price {
   line-height: 1;
-  color: #444444;
+  color: @darkgrey;
 }
 
 .extra-goods__item {
-  display: block;
-  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 32px;
+}
+
+@media (min-width: @desktop-width) {
+  .extra-goods__item {
+    flex-direction: row;
+  }
 }
