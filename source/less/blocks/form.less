@@ -1,5 +1,5 @@
 .form {
-  padding: 20px 20px 0;
+  padding: 27px var(--side-offset) 0;
   font-family: @accent-font;
 }
 
@@ -7,11 +7,13 @@
   font-size: 36px;
   line-height: 1;
   font-weight: 400;
-  margin: 0 0 37px;
+  margin: 0;
+  padding-bottom: 37px;
 }
 
 .form__text {
-  margin: 0 0 39px;
+  margin: 0;
+  padding-bottom: 39px;
 }
 
 .form__fieldset {
@@ -22,34 +24,31 @@
 
 .form__required-note {
   text-decoration: none;
-  color: #444444;
+  color: @darkgrey;
   cursor: default;
 }
 
 .form__label {
   font-size: 16px;
   line-height: (18 / 16);
-  color: #444444;
+  color: @darkgrey;
   text-transform: uppercase;
-  margin-right: 13px;
+  padding-right: 13px;
 }
 
 .form__field {
   font-family: inherit;
   font-size: 16px;
   line-height: (18 / 16);
-  color: #444444;
+  color: @darkgrey;
   text-transform: uppercase;
   margin: 0;
   padding: 14px 20px;
 }
 
 .form__field-group {
-  margin: 0 0 14px;
-}
-
-.form__field-group:last-child {
-  margin-bottom: 46px;
+  margin: 0;
+  padding-bottom: 14px;
 }
 
 .form__list {
@@ -59,24 +58,27 @@
 }
 
 .form__item {
-  margin-bottom: 13px;
+  padding-bottom: 13px;
 }
 
 .form__item:last-child {
-  margin-bottom: 45px;
+  padding-bottom: 40px;
 }
 
 .form__subtitle {
   font-size: 24px;
   line-height: (26 / 24);
   font-weight: 400;
-  margin: 0 0 37px;
+  margin: 0;
+  padding-bottom: 37px;
 }
 
 .form__textarea {
   font-family: @accent-font;
   font-size: 16px;
   line-height: (18 / 16);
+  height: 150px;
+  width: 100%;
 }
 
 .form__text-required {
@@ -86,5 +88,89 @@
 }
 
 .form__comment {
-  margin-bottom: 22px;
+  padding-bottom: 22px;
+}
+
+@media (min-width: @tablet-width) {
+  .form {
+    padding-top: 65px;
+  }
+
+  .form__title {
+    padding-bottom: 54px;
+  }
+
+  .form__text {
+    padding-bottom: 66px;
+  }
+
+  .form__list--additional {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .form__fieldset--cat {
+    padding-bottom: 72px;
+  }
+
+  .form__fieldset--program {
+    padding-bottom: 71px;
+  }
+
+  .form__textarea {
+    height: 174px;
+  }
+
+  .form__wrapper-submit {
+    display: flex;
+  }
+
+  .form__submit {
+    margin-right: 64px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form {
+    padding-top: 73px;
+  }
+
+  .form__title {
+    padding-bottom: 56px;
+  }
+
+  .form__wrapper {
+    display: flex;
+  }
+
+  .form__fieldset--cat {
+    width: 569px;
+    padding: 0 80px 69px 0;
+  }
+
+  .form__fieldset--owner {
+    display: flex;
+    padding-bottom: 67px;
+  }
+
+  .form__comment {
+    padding-bottom: 67px;
+  }
+
+  .form__textarea {
+    height: 174px;
+  }
+
+  .form__list--additional {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .form__field-group--email {
+    padding-right: 78px;
+  }
+
+  .form__submit {
+    margin-right: 84px;
+  }
 }

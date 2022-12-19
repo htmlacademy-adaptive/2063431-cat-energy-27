@@ -3,12 +3,13 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
   <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body class="page__body">
-  <header class="main-header">
+  <header class="main-header main-header--index">
     <a class="main-header__logo">
       <img class="main-header__logo-image" src="img/logo/cat-logo-mobile.svg" width="34" height="38" alt="Маскот.">
       <img class="logo" src="img/logo/cat-energy-logo.svg" width="102" height="18" alt="«Кэт энерджи».">
@@ -41,16 +42,16 @@
       <a class="promo__button button" href="form.html">Подобрать программу</a>
     </section>
 
-    <section class="programs">
+    <section class="program">
       <h2 class="visually-hidden">Выбор программы для вашего кота</h2>
-      <article class="program program--weight-loss">
+      <article class="program__item program__item--weight-loss">
         <h3 class="program__title">Похудение</h3>
         <p class="program__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям?
           Пора
           на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
         <a class="program__link" href="#">Каталог SLIM</a>
       </article>
-      <article class="program program--weight-gain">
+      <article class="program__item program__item--weight-gain">
         <h3 class="program__title">Набор массы</h3>
         <p class="program__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro
           поможет вашему коту нарастить необходимые мышцы!</p>
@@ -84,15 +85,14 @@
         Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по
         16 часов в день. </p>
       <dl class="example__list">
-        <div class="example__item">
-          <dt class="example__term">Снижение веса</dt>
-          <dd class="example__value">5 кг</dd>
-        </div>
-        <div class="example__item">
-          <dt class="example__term">Затрачено времени</dt>
-          <dd class="example__value">60 дней</dd>
-        </div>
-
+          <div class="example__item">
+            <dt class="example__term">Снижение веса</dt>
+            <dd class="example__value">5 кг</dd>
+          </div>
+          <div class="example__item">
+            <dt class="example__term">Затрачено времени</dt>
+            <dd class="example__value">60 дней</dd>
+          </div>
         <div class="example__cost">
           <dt class="example__term example__term--expenses">Затраты на питание:</dt>
           <dd class="example__value example__value--expenses">15 000 руб.</dd>
@@ -108,7 +108,7 @@
     <footer class="main-footer">
       <div class="main-footer__contacts contacts">
         <address class="main-footer__adress main-footer__adress--index">
-          <b class="contacts__title">Приглашаем к сотрудничеству</b>
+          <b class="contacts__title">Приглашаем к сотрудничеству дилеров!</b>
           <p class="contacts__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
         </address>
         <iframe class="contacts__location"
@@ -119,11 +119,11 @@
             alt="Местоположение «Кэт энерджи»."> -->
       </div>
 
-      <a class="main-footer__logo" href="#">
-        <img class="logo" src="img/logo/cat-energy-logo.svg" width="102" height="18" alt="«Кэт энерджи».">
-      </a>
-
       <div class="main-footer__social-wrapper">
+        <a class="main-footer__logo" href="#">
+          <img class="logo" src="img/logo/cat-energy-logo.svg" width="102" height="18" alt="«Кэт энерджи».">
+        </a>
+
         <ul class="main-footer__social social">
           <li class="social__item">
             <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Вконтакте</a>
@@ -135,13 +135,14 @@
             <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">Телеграм</a>
           </li>
         </ul>
-      </div>
 
-      <small class="main-footer__copyright copyright">
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
-          <img class="copyright__logo" src="img/logo/academy-logo.svg" width="27" height="34" alt="«HTML Academy».">
-        </a>
-      </small>
+
+        <small class="main-footer__copyright copyright">
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
+            <img class="copyright__logo" src="img/logo/academy-logo.svg" width="27" height="34" alt="«HTML Academy».">
+          </a>
+        </small>
+      </div>
     </footer>
   </main>
 </body>

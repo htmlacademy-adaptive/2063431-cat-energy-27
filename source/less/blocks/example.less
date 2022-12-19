@@ -1,6 +1,6 @@
 .example {
-  background-color: #eaeaea;
-  padding: 25px 20px 0;
+  background-color: @lightgrey;
+  padding: 25px var(--side-offset) 40px;
 }
 
 .example__title {
@@ -8,24 +8,42 @@
   font-size: 36px;
   line-height: (40 / 36);
   font-weight: 400;
-  margin: 0 0 40px;
+  margin: 0;
+  padding-bottom: 40px;
 }
 
 .example__description {
-  margin: 0 0 20px;
+  margin: 0;
+  padding-bottom: 21px;
+}
+
+.example__list {
+  margin: 0;
+}
+
+// .example__list-wrapper {
+//   display: flex;
+//   gap: 32px;
+//   padding-bottom: 19px;
+// }
+
+.example__cost {
+  display: flex;
 }
 
 .example__term {
   font-size: 12px;
   line-height: 1;
   text-transform: lowercase;
-  color: #444444;
+  color: @darkgrey;
+
 
   &--expenses {
     font-family: @accent-font;
-    line-height: (20 / 12);
+    font-size: 14px;
+    line-height: (20 / 14);
     text-transform: uppercase;
-    color: #000000;
+    color: @black;
   }
 }
 
@@ -34,12 +52,64 @@
   font-size: 24px;
   line-height: 1;
   text-transform: uppercase;
+  margin: 0;
 
   &--expenses {
-    line-height: (20 / 24);
+    font-size: 14px;
+    line-height: (20 / 14);
   }
 }
 
-.example__slider {
-  padding-bottom: 40px;
+@media (min-width: @tablet-width) {
+  .example {
+    padding-top: 43px;
+    padding-bottom: 100px;
+    background-image: linear-gradient(@white 50%, @lightgrey 50%);
+  }
+
+  .example__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .example__title {
+    padding-bottom: 63px;
+  }
+
+  .example__description {
+    padding-bottom: 54px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example {
+    position: relative;
+    padding-top: 0;
+    padding-bottom: 75px;
+    background-image: linear-gradient(@white 136px, @lightgrey 0);
+  }
+
+  .example__title {
+    padding-bottom: 146px;
+  }
+
+  .example__description {
+    padding-bottom: 69px;
+    width: 370px;
+  }
+
+  .example__list {
+    flex-direction: column;
+    width: 370px;
+  }
+
+  .example__list-wrapper {
+    padding-bottom: 55px;
+  }
+
+  .example__slider {
+    position: absolute;
+    top: 0;
+    right: 110px;
+  }
 }

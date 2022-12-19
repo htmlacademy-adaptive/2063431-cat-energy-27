@@ -1,0 +1,26 @@
+@container-width: 1220px;
+@half: (@container-width / 2);
+
+:root {
+  --side-offset: 20px;
+
+  @media (min-width: @tablet-width) {
+    --side-offset: 30px;
+  }
+
+  @media (min-width: (@container-width + 2 * 30px)) {
+    --side-offset: calc(50vw - @half);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
