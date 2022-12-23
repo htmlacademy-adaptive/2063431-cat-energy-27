@@ -29,5 +29,29 @@
 }
 
 .card__order {
+  grid-area: d;
   margin-bottom: 14px;
+}
+
+@media (min-width: @tablet-width) {
+  .card {
+    width: 324px;
+    height: 511px;
+    background-image: linear-gradient(@white 20%, @basicgrey 20%, @basicgrey 100%);
+  }
+
+  .card__order {
+    width: 248px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .card {
+    width: 245px;
+    height: 511px;
+  }
+
+  .card__order {
+    width: 168px;
+  }
 }

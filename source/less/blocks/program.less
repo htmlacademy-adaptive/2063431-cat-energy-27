@@ -30,8 +30,16 @@
   line-height: 1;
   text-transform: uppercase;
   text-decoration: none;
-  color: #000000;
+  color: @black;
   padding: 0 0 18px 19px;
+
+  &:active {
+    color: fade(@black, 30%);
+  }
+}
+
+.program__link-arrow {
+  margin-left: 15px;
 }
 
 @media (min-width: @tablet-width) {
@@ -52,6 +60,10 @@
   .program__link {
     padding-bottom: 53px;
     padding-left: 52px;
+  }
+
+  .program__link-arrow {
+    margin-left: 25px;
   }
 }
 

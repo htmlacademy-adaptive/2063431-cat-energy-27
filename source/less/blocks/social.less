@@ -7,3 +7,22 @@
   gap: 24px;
   padding-bottom: 43px;
 }
+
+.social__link-icon {
+  color: #666666;
+}
+
+.social__link-icon:focus,
+.social__link-icon:hover {
+  color: @accent-color;
+}
+
+.social__link-icon:active {
+  color: fade(@accent-color, 30%);
+}
+
+@media (min-width: @tablet-width) {
+  .social {
+    padding: 0;
+  }
+}

@@ -16,7 +16,17 @@
   height: 40px;
 
   &--secondary {
-    background-color: #f2f2f2;
-    color: #444444;
+    background-color: @basicgrey;
+    color: @darkgrey;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    background-color: #5eaa2f;
+    color: fade(@white, 30%);
   }
 }
