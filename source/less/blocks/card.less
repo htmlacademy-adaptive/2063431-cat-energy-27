@@ -1,6 +1,16 @@
 .card {
-  width: 320px;
-  height: 190px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 11px;
+  padding-bottom: 14px;
+}
+
+.card__wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 55%;
 }
 
 .card__product {
@@ -11,47 +21,62 @@
   text-transform: uppercase;
   color: #222222;
   margin: 0;
+  padding-bottom: 18px;
 }
 
 .card__link {
   text-decoration: none;
 }
 
-.card__image {
-  padding-left: 36px;
+.card__row {
+  display: flex;
+  justify-content: space-between;
 }
 
 .card__info {
   font-size: 12px;
   line-height: (16 / 12);
   color: @darkgrey;
-  margin-bottom: 22px;
+  padding-bottom: 22px;
 }
 
 .card__order {
-  grid-area: d;
-  margin-bottom: 14px;
+  width: 100%;
 }
 
 @media (min-width: @tablet-width) {
   .card {
-    width: 324px;
-    height: 511px;
     background-image: linear-gradient(@white 20%, @basicgrey 20%, @basicgrey 100%);
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 0;
   }
 
   .card__order {
+    margin-bottom: 39px;
     width: 248px;
+  }
+
+  .card__product {
+    padding-bottom: 21px;
+  }
+
+  .card__row {
+    padding-bottom: 14px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .card {
-    width: 245px;
-    height: 511px;
+    background-image: linear-gradient(@white 20%, @basicgrey 20%, @basicgrey 100%);
   }
 
   .card__order {
+    margin-bottom: 40px;
     width: 168px;
+  }
+
+  .card__row {
+    padding-bottom: 14px;
   }
 }

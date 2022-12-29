@@ -18,11 +18,11 @@
 
   &:hover,
   &:focus {
-    color: fade(@black, 60%);
+    color: rgba(@black, 60%);
   }
 
   &:active {
-    color: fade(@black, 30%);
+    color: rgba(@black, 30%);
   }
 }
 
@@ -46,8 +46,9 @@
 }
 
 .main-nav--closed .main-nav__toggle::before {
-  display: block;
   content: "";
+  position: absolute;
+  right: 13px;
   width: 24px;
   height: 2px;
   background-color: @black;
@@ -85,7 +86,6 @@
   left: 0;
   width: 100%;
   z-index: 10;
-  min-height: 80vh;
 }
 
 .main-nav--nojs .main-nav__toggle {
@@ -102,7 +102,7 @@
 }
 
 @media (max-width: @mobile-width-only) {
-  .main-nav--closed .main-nav__list {
+  .main-nav--closed .main-nav__item {
     display: none;
   }
 }

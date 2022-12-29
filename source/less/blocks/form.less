@@ -1,6 +1,7 @@
 .form {
-  padding: 27px var(--side-offset) 0;
+  padding: 27px var(--side-offset) 32px;
   font-family: @accent-font;
+  overflow-x: hidden;
 }
 
 .form__title {
@@ -37,6 +38,7 @@
 }
 
 .form__field {
+  width: 100%;
   font-family: inherit;
   font-size: 16px;
   line-height: (18 / 16);
@@ -47,6 +49,9 @@
 }
 
 .form__field-group {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
   margin: 0;
   padding-bottom: 14px;
 }
@@ -66,11 +71,28 @@
 }
 
 .form__subtitle {
+  display: inline-block;
+  position: relative;
   font-size: 24px;
   line-height: (26 / 24);
   font-weight: 400;
   margin: 0;
-  padding-bottom: 37px;
+  margin-bottom: 37px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    height: 2px;
+    width: 1000%;
+    background-color: @accent-color;
+    z-index: -1;
+    left: calc(100% + 22px);
+  }
+
+  &--owner::after {
+    left: calc(100% + 14px);
+  }
 }
 
 .form__textarea {
@@ -83,7 +105,7 @@
 
 .form__text-required {
   display: block;
-  padding: 21px 0 32px;
+  padding: 21px 0 0;
   text-align: center;
 }
 
@@ -93,7 +115,7 @@
 
 @media (min-width: @tablet-width) {
   .form {
-    padding-top: 65px;
+    padding: 65px 70px 72px;
   }
 
   .form__title {
@@ -107,6 +129,23 @@
   .form__list--additional {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .form__subtitle {
+    &::after {
+      left: calc(100% + 40px);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      height: 2px;
+      width: 1000%;
+      background-color: @accent-color;
+      z-index: -1;
+      right: calc(100% + 39px);
+    }
   }
 
   .form__fieldset--cat {
@@ -128,11 +167,15 @@
   .form__submit {
     margin-right: 64px;
   }
+
+  .form__text-required {
+    margin-top: -10px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .form {
-    padding-top: 73px;
+    padding: 73px var(--side-offset) 82px;
   }
 
   .form__title {
@@ -167,7 +210,12 @@
   }
 
   .form__field-group--email {
+    width: 100%;
     padding-right: 78px;
+  }
+
+  .form__field-group--phone {
+    width: 100%;
   }
 
   .form__submit {

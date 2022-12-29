@@ -18,11 +18,17 @@
 }
 
 .example__list {
+  display: grid;
+  text-align: center;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
   margin: 0;
 }
 
 .example__cost {
   display: flex;
+  grid-column: 1 / -1;
+  justify-content: center;
 }
 
 .example__term {
@@ -62,8 +68,14 @@
   }
 
   .example__list {
-    display: flex;
-    justify-content: space-between;
+    grid-template-columns: 162px 162px 1fr;
+    align-items: center;
+  }
+
+  .example__cost {
+    grid-column: auto;
+    flex-direction: column;
+    text-align: right;
   }
 
   .example__title {
@@ -93,8 +105,12 @@
   }
 
   .example__list {
-    flex-direction: column;
-    width: 370px;
+    grid-template-columns: 1fr 1fr;
+    gap: 42px;
+  }
+
+  .example__cost {
+    text-align: left;
   }
 
   .example__list-wrapper {

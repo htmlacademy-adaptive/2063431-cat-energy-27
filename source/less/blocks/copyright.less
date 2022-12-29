@@ -1,21 +1,21 @@
 
 .copyright__link {
+  display: inline-flex;
+  align-items: center;
   font-size: 16px;
   line-height: (20 / 16);
   color: @darkgrey;
   text-decoration: none;
-  padding-right: 20px;
-  padding-left: 20px;
 
   &:active {
-    color: fade(@darkgrey, 30%);
+    color: rgba(@darkgrey, 30%);
   }
 }
 
 .copyright__logo {
+  position: absolute;
+  right: var(--side-offset);
   color: #666666;
-  float: right;
-  margin-right: 20px;
 }
 
 .copyright__link:focus > .copyright__logo,
@@ -24,15 +24,12 @@
 }
 
 .copyright__link:active > .copyright__logo {
-  color: fade(@accent-color, 30%);
+  color: rgba(@accent-color, 30%);
 }
 
 @media (min-width: @tablet-width) {
-  .copyright__link {
-    padding-left: 0;
-  }
-
   .copyright__logo {
-    margin: 0;
+    position: static;
+    margin-left: 27px;
   }
 }
