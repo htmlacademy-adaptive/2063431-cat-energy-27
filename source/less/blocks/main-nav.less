@@ -15,6 +15,15 @@
 
 .main-nav__item {
   padding: 22px 0 24px;
+
+  &:hover,
+  &:focus {
+    color: rgba(@black, 60%);
+  }
+
+  &:active {
+    color: rgba(@black, 30%);
+  }
 }
 
 .main-nav__link {
@@ -22,11 +31,105 @@
   color: inherit;
 }
 
+.main-nav__toggle {
+  position: absolute;
+  top: 12px;
+  right: 13px;
+  z-index: 2;
+  display: block;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border: none;
+  background-color: @white;
+  padding: 0;
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  right: 13px;
+  width: 24px;
+  height: 2px;
+  background-color: @black;
+  box-shadow: 0 8px 0 0 @black, 0 -8px 0 0 @black;
+  margin: 0 auto;
+}
+
+.main-nav--opened .main-nav__toggle {
+  top: 12px;
+  right: 13px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    right: 7px;
+    width: 24px;
+    height: 2px;
+    background-color: @black;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.main-nav--opened .main-nav__wrapper {
+  position: absolute;
+  background-color: @white;
+  top: 65px;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.main-nav--nojs .main-nav__toggle {
+  display: none;
+}
+
+.main-nav--nojs .main-nav__wrapper {
+  position: static;
+  min-height: 0;
+}
+
+.main-nav--nojs .main-nav__item {
+  display: block;
+}
+
+@media (max-width: @mobile-width-only) {
+  .main-nav--closed .main-nav__item {
+    display: none;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .main-nav__list {
     display: flex;
     gap: 35px;
     padding-top: 42px;
+  }
+
+  .main-nav__item {
+    padding: 0;
+
+    &--active {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: -8px;
+        left: 0;
+        height: 2px;
+        background-color: @accent-color;
+      }
+    }
   }
 
   .main-nav__toggle {
@@ -37,5 +140,9 @@
 @media (min-width: @desktop-width) {
   .main-nav__list {
     padding-top: 69px;
+  }
+
+  .main-nav__item--active::after {
+    background-color: @white;
   }
 }
