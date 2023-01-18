@@ -1,10 +1,20 @@
 .card {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  padding-top: 11px;
-  padding-bottom: 14px;
+  padding-bottom: 25px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -19px;
+    height: 1px;
+    width: 1000%;
+    background-color: #d6d6d6;
+    z-index: -1;
+  }
 }
 
 .card__wrapper {
@@ -46,14 +56,17 @@
 
 @media (min-width: @tablet-width) {
   .card {
-    background-image: linear-gradient(@white 20%, @basicgrey 20%, @basicgrey 100%);
+    background-image: linear-gradient(@white 16%, @basicgrey 16%, @basicgrey 100%);
     flex-direction: column;
     text-align: center;
-    padding-bottom: 0;
+    padding-bottom: 39px;
+
+    &::before {
+      content: none;
+    }
   }
 
   .card__order {
-    margin-bottom: 39px;
     width: 248px;
   }
 
@@ -62,7 +75,9 @@
   }
 
   .card__row {
-    padding-bottom: 14px;
+    padding-bottom: 9px;
+    margin-bottom: 6px;
+    border-bottom: 1px solid #cdcdcd;
   }
 }
 
