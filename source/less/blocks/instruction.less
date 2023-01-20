@@ -14,15 +14,20 @@
 .instruction__list {
   padding: 0;
   list-style-type: none;
+  counter-reset: listCounter;
 }
 
 .instruction__text {
   margin: 0;
+  padding-left: 20px;
   color: @darkgrey;
 }
 
 .instruction__item {
+  display: flex;
+  position: relative;
   padding-bottom: 20px;
+  counter-increment: listCounter;
 }
 
 .instruction__item:last-child {
@@ -36,7 +41,34 @@
   }
 
   .instruction__item {
+    display: block;
     width: 230px;
+    height: 280px;
+
+    &::after {
+      content: counters(listCounter, ".");
+      position: absolute;
+      right: 0;
+      top: -30px;
+      font-family: @accent-font;
+      font-size: 280px;
+      line-height: 1;
+      font-weight: 400;
+      color: @basicgrey;
+      z-index: -1;
+    }
+  }
+
+  .instruction__text {
+    font-size: 16px;
+    line-height: (24 / 16);
+    padding: 0;
+  }
+
+  .instruction__item-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 31px;
   }
 }
 
